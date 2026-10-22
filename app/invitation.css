@@ -1,0 +1,70 @@
+.element[data-element=names]>.text-content{white-space:pre}
+/* A quiet editorial palette with locally bundled Vietnamese type. */
+.preview-overlay{background:#e9ece6;background-image:radial-gradient(ellipse at 50% 0,#faf8f1aa,transparent 70%)}
+.preview-bar{background:#faf8f1e8;border-bottom:1px solid #c5c9b733;color:#5b6858;box-shadow:none;min-height:54px}
+.preview-brand{font-style:italic;letter-spacing:-.035em;font-size:23px;color:#50634e}
+.guest .preview-bar{min-height:48px;padding-top:7px;padding-bottom:7px}
+.guest .preview-brand{font-size:23px;max-width:60%}
+.guest .preview-bar>span:nth-child(2){font-size:8px;letter-spacing:2.2px;color:#8a937e}
+.reader-layout.plain-reader-layout{margin-top:24px;gap:36px}
+.guest .reader-layout.plain-reader-layout{max-width:480px;margin:0 auto;padding:0 0 40px}
+.plain-invitation{max-width:480px;box-shadow:0 20px 90px #2d403312}
+.plain-invitation .sheet{box-shadow:none}
+.plain-invitation .invitation-section+.invitation-section{border-top:0}
+.element[style*="cursive"]{font-family:'Playfair Display',Georgia,serif!important;font-style:italic;font-weight:400;letter-spacing:-.025em;line-height:1.25}
+.sheet[data-layout=atelier]{background-image:none;overflow:hidden}
+.sheet[data-layout=atelier] .paper-border{display:none}
+.sheet[data-layout=atelier] .element.image img{border-radius:0;object-position:50% 55%}
+.sheet[data-layout=atelier] .element[data-element=names]{letter-spacing:-.045em;line-height:1.25}
+.sheet[data-layout=atelier] .element[style*="sans-serif"]{letter-spacing:.19em}
+.botanical-mark{position:absolute;width:24%;height:auto;left:38%;top:4.5%;color:var(--sheet-accent);pointer-events:none;opacity:.8}
+.sheet-rule{position:absolute;top:67%;height:1px;width:14%;left:43%;background:var(--sheet-accent);opacity:.6;pointer-events:none}
+.sheet[data-page=cover] .botanical-mark{top:60.5%;width:19%;left:40.5%}
+.sheet[data-page=cover] .sheet-rule{display:none}
+.sheet[data-layout=atelier][data-page=cover] .element[data-element=photo]:after{content:'';position:absolute;inset:0;border:10px solid #ffffff08;pointer-events:none}
+.sheet[data-page=story] .botanical-mark{color:#d4c19a;top:5.5%}
+.sheet[data-page=story] .sheet-rule{background:#b9a476}
+.sheet[data-layout=atelier][data-page=story]:before{content:'♡';font:300 90cqw/1 'Playfair Display',serif;color:#ffffff02;position:absolute;left:0;right:0;text-align:center;top:15%;pointer-events:none}
+.sheet[data-page=event] .sheet-rule{top:60%;width:16%;left:42%}
+.sheet[data-page=thanks] .botanical-mark,.sheet[data-page=thanks] .sheet-rule{display:none}
+.sheet[data-layout=atelier][data-page=thanks] .element.image{padding:5px;border:1px solid #a88b5c55}
+.plain-invitation-guest{position:relative;padding:40px 30px 43px;border:0;border-bottom:1px solid #a88b5c22;background:var(--invitation-paper)}
+.plain-invitation-guest:before{content:'';display:block;width:35px;height:1px;background:var(--invitation-accent);opacity:.6;margin:0 auto 23px}
+.plain-invitation-guest>span{font:italic 17px/1.6 'Playfair Display',serif;color:var(--invitation-accent)}
+.plain-invitation-guest>strong{font:400 29px/1.45 'Playfair Display',serif;color:var(--invitation-ink);margin:9px auto 0;max-width:330px}
+.plain-invitation-footer{border-top:1px solid #a88b5c22;padding:45px 30px 55px;font-size:17px;line-height:1.8}
+.extra-section{padding:58px 28px;border-top:1px solid color-mix(in srgb,var(--invitation-accent) 14%,transparent)}
+.extra-section h2{font:italic 35px/1.2 'Playfair Display',serif;letter-spacing:-.025em;margin:12px 0 22px}
+.extra-section>p{font:16px/1.85 'Playfair Display',serif;margin:12px auto 25px;max-width:330px;opacity:.8}
+.extra-section>svg{width:23px;height:23px;stroke-width:1.1;opacity:.85}
+.family-section{padding-top:52px;padding-bottom:52px}
+.family-columns{margin-top:28px;gap:15px}
+.family-columns h3{font:italic 25px/1.4 'Playfair Display',serif;margin-bottom:14px}
+.family-columns p{font:15px/1.9 'Playfair Display',serif}
+.extra-eyebrow{font-size:9px;letter-spacing:2px}
+.photobook-grid{gap:7px;margin-top:28px}
+.photobook-grid button{border-radius:0;aspect-ratio:3/4}
+.photobook-grid button:first-child{grid-column:1/-1;aspect-ratio:4/3}
+.photobook-grid img{object-position:50% 55%}
+.gift-accounts{gap:18px}
+.gift-accounts>div{border:1px solid color-mix(in srgb,var(--invitation-accent) 22%,transparent);border-radius:6px;padding:24px 15px;background:#ffffff24}
+.gift-accounts>div>h3{font:italic 29px 'Playfair Display',serif;margin:0 0 16px}
+.gift-accounts .w-card{border:0;background:transparent;padding:0 10px;min-height:350px}
+.gift-accounts .w-card h3{font-size:17px}
+.gift-accounts .w-card>svg{display:none}
+.gift-accounts .bank-qr-open{max-width:240px;height:210px;margin:8px auto}
+.extra-section form{gap:18px;margin-top:28px}
+.extra-section label{font-family:'Be Vietnam Pro',sans-serif;font-size:13px;gap:9px;text-align:left}
+.extra-section input,.extra-section textarea,.extra-section select{padding:14px 15px;background:#ffffff70;border:1px solid #b6bea666;border-radius:3px;font-family:'Be Vietnam Pro',sans-serif;font-size:16px;line-height:1.5}
+.extra-section form>button,.extra-secondary{border-radius:3px;min-height:50px;font:13px/1.5 'Be Vietnam Pro',sans-serif;letter-spacing:.04em;background:#344c40}
+.extra-section .extra-muted{font:13px/1.8 'Be Vietnam Pro',sans-serif;opacity:.6}
+.wish-list{margin-top:35px}
+.wish-list article{padding:24px 0}
+.wish-list strong{font:italic 23px 'Playfair Display',serif}
+.wish-list p{font:17px/1.8 'Playfair Display',serif}
+.wish-list blockquote{margin-top:18px;border-width:1px}
+.invitation-music>button{background:#fbf8f0f2;border-color:#b8bcaa88;color:#53674e;box-shadow:0 4px 24px #233b2912;font-size:12px;padding:10px 15px;min-height:44px}
+.invitation-music>button>svg{width:16px;height:16px}
+.qr-card{border-radius:10px!important;border-color:#d8ddcf!important;box-shadow:0 8px 30px #263e2910!important}
+@media(max-width:900px){.reader-layout.plain-reader-layout{padding-left:0;padding-right:0;margin-top:12px}.guest .reader-layout.plain-reader-layout{max-width:480px;margin-top:0;padding-left:0;padding-right:0}.preview-bar{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}.guest .preview-bar{min-height:calc(45px + env(safe-area-inset-top));padding-top:calc(7px + env(safe-area-inset-top))}.guest .preview-bar>span:nth-child(2){font-size:7px;letter-spacing:1.7px}.extra-section h2{font-size:33px}.family-columns h3{font-size:25px}}
+@media(max-width:360px){.extra-section{padding-left:22px;padding-right:22px}.family-columns{gap:8px}.family-columns p{font-size:14px}.plain-invitation-guest>strong{font-size:26px}}

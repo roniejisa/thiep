@@ -1,0 +1,30 @@
+/* Vector silhouettes share the same container-relative flight path in previews
+   and invitations; no animation loop or sprite downloads are needed. */
+.invitation-effects{container-type:size}
+.invitation-effects>span>svg{display:block;width:100%;height:auto;overflow:visible}
+.atmosphere-preview>span{--motion-time:calc(var(--particle-duration) * .45)}
+.invitation-effects.effect-birds>span{left:-90px!important;top:var(--flight-top);width:calc(var(--particle-size) * 1.6);color:#faf6ea;animation:invitation-birds var(--motion-time,var(--particle-duration)) var(--particle-delay) linear infinite;filter:drop-shadow(0 1px 1px #263a2920)}
+.effect-birds>span:nth-child(even){animation-direction:reverse}
+.effect-birds>span:nth-child(even)>svg{transform:scaleX(-1)}
+.dove-wing{transform-origin:40px 29px;animation:dove-flap var(--wing-time,.9s) ease-in-out infinite}
+.dove-far-wing{transform-origin:42px 28px;animation:dove-flap var(--wing-time,.9s) -.2s ease-in-out infinite;opacity:.8}
+@keyframes invitation-birds{0%{transform:translate3d(-20px,10px,0);opacity:0}8%{opacity:.85}35%{transform:translate3d(35cqw,-15px,0)}65%{transform:translate3d(65cqw,5px,0)}90%{opacity:.85}100%{transform:translate3d(calc(100cqw + 190px),-30px,0);opacity:0}}
+@keyframes dove-flap{0%,100%{transform:rotateX(5deg) rotate(-6deg)}50%{transform:rotateX(70deg) rotate(18deg)}}
+.invitation-effects.effect-balloons>span{top:auto;bottom:-130px;width:var(--particle-size);color:var(--particle-color);animation:invitation-balloons var(--motion-time,var(--particle-duration)) var(--particle-delay) linear infinite}
+.atmosphere-balloon{transform-origin:50% 25%;animation:balloon-sway 4s ease-in-out infinite}
+.effect-balloons>span:nth-child(even)>.atmosphere-balloon{animation-delay:-2s}
+@keyframes invitation-balloons{0%{transform:translate3d(0,40px,0);opacity:0}10%{opacity:.65}85%{opacity:.65}100%{transform:translate3d(var(--particle-drift),calc(-100cqh - 280px),0);opacity:0}}
+@keyframes balloon-sway{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(7deg)}}
+.invitation-effects.effect-hearts-fall>span{top:-65px;width:var(--particle-size);color:var(--particle-color);animation:invitation-heart-rain var(--motion-time,var(--particle-duration)) var(--particle-delay) linear infinite}
+@keyframes invitation-heart-rain{0%{transform:translate3d(0,-30px,0) rotate(-15deg);opacity:0}8%{opacity:.6}50%{transform:translate3d(var(--particle-drift),50cqh,0) rotate(12deg)}90%{opacity:.6}100%{transform:translate3d(0,calc(100cqh + 150px),0) rotate(-15deg);opacity:0}}
+.invitation-effects.effect-confetti>span{top:-40px;width:14px;color:var(--particle-color);animation:invitation-confetti var(--motion-time,var(--particle-duration)) var(--particle-delay) linear infinite}
+.confetti-piece{display:block;width:7px;height:12px;background:currentColor;border-radius:1px;animation:confetti-twirl 3s var(--particle-delay) linear infinite}
+.effect-confetti>span:nth-child(3n)>.confetti-piece{width:6px;height:6px;border-radius:50%}
+.effect-confetti>span:nth-child(3n+1)>.confetti-piece{width:5px;height:15px;animation-duration:2.3s}
+@keyframes invitation-confetti{0%{transform:translate3d(0,-30px,0);opacity:0}8%{opacity:.8}90%{opacity:.8}100%{transform:translate3d(var(--particle-drift),calc(100cqh + 100px),0);opacity:0}}
+@keyframes confetti-twirl{0%{transform:rotateY(0deg) rotate(0deg)}100%{transform:rotateY(360deg) rotate(220deg)}}
+.invitation-effects[data-paused=true] *{animation-play-state:paused!important}
+.atmosphere-options{grid-template-columns:repeat(5,minmax(0,1fr))}
+.atmosphere-options button>span{font-size:11px}
+@media(max-width:700px){.atmosphere-options{grid-template-columns:repeat(3,minmax(0,1fr))}.effect-birds>span:nth-child(n+8),.effect-balloons>span:nth-child(n+11){display:none}}
+@media(prefers-reduced-motion:reduce){.invitation-effects,.invitation-effects *{animation:none!important;transition:none!important}.invitation-effects{display:none!important}}
